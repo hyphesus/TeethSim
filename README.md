@@ -3,6 +3,9 @@
 
 This Unity project contains my 4th grade thesis for computer engineering bachelor's. The purpose of this project is to create an accurate and deliberate environment for Dentist students, with the help of Phantom-Omni haptic device. To be more precise, the eximination process the user going through will be a cavity cleaning/filling situation. For real usage purposes, the movement speed / the impact effect of haptics are going to be evaluated based on image processing of certain professionals at work. 
 
+![image](https://github.com/hyphesus/TeethSim/assets/72172084/d0527fe1-b4fb-4277-a955-8202e33af42b)
+
+
 # Plugin for Haptics
 
 https://assetstore.unity.com/packages/tools/integration/haptics-direct-for-unity-v1-197034
