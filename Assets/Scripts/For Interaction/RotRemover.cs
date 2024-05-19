@@ -1,10 +1,13 @@
 using UnityEngine;
 
-public class StickyObject : MonoBehaviour
+public class ObjectInteraction : MonoBehaviour
 {
     private GameObject collidingObject;
     private Rigidbody collidingObjectRigidbody;
     private bool isStuck = false;
+    private bool isInteracting = false;
+    private Transform initialParent;
+    private Vector3 interactionOffset;
 
     void OnCollisionEnter(Collision collision)
     {
@@ -28,42 +31,52 @@ public class StickyObject : MonoBehaviour
 
     void Update()
     {
-        // Ensure collidingObject is not null before performing any operations
-        if (collidingObject != null)
+        // Check if left mouse button is clicked
+        if (Input.GetKeyDown(KeyCode.Mouse0))
         {
-            // Check if left mouse button is clicked
-            if (Input.GetKeyDown(KeyCode.Mouse0))
+            if (collidingObject != null)
             {
-                // Make the colliding object a child of this GameObject
-                collidingObject.transform.SetParent(transform);
-                Debug.Log("Object attached: " + collidingObject.name);
+                isInteracting = true;
                 isStuck = true;
-            }
-            // Check if left mouse button is released
-            else if (Input.GetKeyUp(KeyCode.Mouse0) && isStuck)
-            {
-                // Detach the colliding object from this GameObject
-                Transform originalParent = collidingObject.transform.parent;
-                collidingObject.transform.SetParent(null);
-                Debug.Log("Object detached: " + collidingObject.name);
 
-                // Reset position and rotation in world space
-                collidingObject.transform.position = transform.position;
-                collidingObject.transform.rotation = transform.rotation;
+                // Store the initial parent
+                initialParent = collidingObject.transform.parent;
 
-                // Reset velocity and angular velocity
-                collidingObjectRigidbody.velocity = Vector3.zero;
-                collidingObjectRigidbody.angularVelocity = Vector3.zero;
+                // Calculate the interaction offset
+                interactionOffset = collidingObject.transform.position - transform.position;
 
-                isStuck = false;
-                collidingObject = null; // Reset collidingObject to prevent further null reference issues
-                collidingObjectRigidbody = null; // Reset reference to the rigidbody
+                // Set the new parent (this object)
+                collidingObject.transform.SetParent(transform, true);
+
+                Debug.Log("Object selected: " + collidingObject.name);
             }
         }
-        else if (isStuck)
+        // Check if left mouse button is released
+        else if (Input.GetKeyUp(KeyCode.Mouse0))
         {
-            // If the object is no longer colliding and we think it's stuck, reset the state
-            isStuck = false;
+            if (isInteracting)
+            {
+                isStuck = false;
+                isInteracting = false;
+                if (collidingObject != null)
+                {
+                    Debug.Log("Object released: " + collidingObject.name);
+
+                    // Restore the initial parent
+                    collidingObject.transform.SetParent(initialParent, true);
+
+                    // Clear the collidingObject reference after release
+                    collidingObject = null;
+                    collidingObjectRigidbody = null;
+                }
+            }
+        }
+
+        // If the object is stuck, update its position and rotation to follow the interaction object with offset
+        if (isStuck && collidingObject != null)
+        {
+            collidingObject.transform.position = transform.position + interactionOffset;
+            collidingObject.transform.rotation = transform.rotation;
         }
     }
 }
