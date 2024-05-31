@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Rotten
   - dentistPick
+  - objDef
   layers:
   - Default
   - TransparentFX
