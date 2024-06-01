@@ -400,6 +400,18 @@ PrefabInstance:
       propertyPath: m_TagString
       value: objDef
       objectReference: {fileID: 0}
+    - target: {fileID: 2662217226178544170, guid: 09a8e76d4a7734b3aa30e71f4f49387c, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2662217226178544170, guid: 09a8e76d4a7734b3aa30e71f4f49387c, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2662217226178544170, guid: 09a8e76d4a7734b3aa30e71f4f49387c, type: 3}
+      propertyPath: m_Materials.Array.data[1]
+      value: 
+      objectReference: {fileID: 1071117121598375719, guid: 09a8e76d4a7734b3aa30e71f4f49387c, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -761,8 +773,8 @@ MonoBehaviour:
   spherePrefab: {fileID: 296141239}
   meshFilter: {fileID: 575096198}
   numberOfSpheres: 10
-  areaCenter: {x: -22.8, y: 1.52, z: -11.01}
-  areaSize: {x: 2.39, y: 3.91, z: 2.29}
+  areaCenter: {x: -22.8, y: 3.56, z: -11.01}
+  areaSize: {x: 1.13, y: 2, z: 1.08}
 --- !u!1 &705507993
 GameObject:
   m_ObjectHideFlags: 0
