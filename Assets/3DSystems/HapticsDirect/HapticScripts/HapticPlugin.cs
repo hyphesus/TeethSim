@@ -1,4 +1,4 @@
-// This code contains 3D SYSTEMS Confidential Information and is disclosed to you
+﻿// This code contains 3D SYSTEMS Confidential Information and is disclosed to you
 // under a form of 3D SYSTEMS software license agreement provided separately to you.
 //
 // Notice
@@ -1646,6 +1646,8 @@ public class HapticPlugin : MonoBehaviour
         getButtons(DeviceIdentifier, Buttons, LastButtonsT,ref inkwell);
 
         //Debug.Log("Button1 = " + Buttons[0] + "  " + LastButtons[0]);
+
+        
 
         if (LastButtons[0] == 0 && Buttons[0] == 1)
         {
