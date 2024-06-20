@@ -9,15 +9,18 @@ This Unity project contains my 4th-grade thesis for computer engineering bachelo
 
 ## Setting it up
 
-Simply download the designated Haptic Device's driver after connecting it to your Pc. Clone this repository and then go to the hierarchy. In this image, you will change the Device Identifier name of HapticActor object. ![image](https://github.com/hyphesus/TeethSim/assets/72172084/cda4d746-2488-48d3-913f-321c2b295486)
+Simply download the designated Haptic Device's driver after connecting it to your Pc. Clone this repository and then go to the hierarchy. In this image, you will change the Device Identifier name of HapticActor object.
+![image](https://github.com/hyphesus/TeethSim/assets/72172084/cda4d746-2488-48d3-913f-321c2b295486)
 
-![image](https://github.com/hyphesus/TeethSim/assets/72172084/431d22cc-a141-478f-beb0-f714ca7c0a80) change its name based on the information of the haptic device's driver. Remember that this project has been built in Unity 2022.3.21F1. 
+![image](https://github.com/hyphesus/TeethSim/assets/72172084/431d22cc-a141-478f-beb0-f714ca7c0a80) 
+change its name based on the information of the haptic device's driver. Remember that this project has been built in Unity 2022.3.21F1. 
 
 ## How to play?
 
 Set your FreeLook cameras with W A S D for 2d movement and CTRL - SHIFT for 3d movement. Use your haptic device to interact.
 
-![image](https://github.com/hyphesus/TeethSim/assets/72172084/b48ce4a8-dc18-4219-b9e1-e93eba5f68d4)
+![image](https://github.com/hyphesus/TeethSim/assets/72172084/201d0424-ae2b-4bc5-9a6c-c4de2c64b7fe)
+
 
 ## Plugin for Haptics
 
