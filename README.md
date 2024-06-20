@@ -10,9 +10,11 @@ This Unity project contains my 4th-grade thesis for computer engineering bachelo
 ## Setting it up
 
 Simply download the designated Haptic Device's driver after connecting it to your Pc. Clone this repository and then go to the hierarchy. In this image, you will change the Device Identifier name of HapticActor object.
+
 ![image](https://github.com/hyphesus/TeethSim/assets/72172084/cda4d746-2488-48d3-913f-321c2b295486)
 
 ![image](https://github.com/hyphesus/TeethSim/assets/72172084/431d22cc-a141-478f-beb0-f714ca7c0a80) 
+
 change its name based on the information of the haptic device's driver. Remember that this project has been built in Unity 2022.3.21F1. 
 
 ## How to play?
