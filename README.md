@@ -1,3 +1,6 @@
+## Update on thesis
+
+This project is the final paper that I started and completed for my senior year computer engineering coursework. It was graded AA by the evaluating jury members and was deemed worthy of the first prize in the final papers competition held in our department.
 
 # Teeth Examination Simulator For Phantom-Omni haptic device
 
